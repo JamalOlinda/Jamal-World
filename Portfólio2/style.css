@@ -1,0 +1,86 @@
+style>
+    body {
+        font-family: Calibri, sans-serif;
+    }
+    *{
+        padding: 0;
+        margin: 0;
+    }
+    header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 70px;
+        background-color: salmon;
+        color: white;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+    ul li{
+        list-style-type: none;
+    }
+    header ul{
+        display: flex;
+        gap: 20px;
+    }
+    a{
+        text-decoration: none;
+        color: white;
+    }
+    .direita img{
+        width: 100%;
+        border-radius: 50px;
+        box-shadow: 20px 20px 20px black;
+    }
+    .direita, .esquerda{
+        width: 50vw;
+        padding: 100px;
+    }
+    .section{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 70px;
+    }
+
+    .meio{
+        text-align: center;
+        background-color: bisque;
+    }
+
+    .h3{
+        font-size: 100px;
+        text-shadow: 20px 20px 20px rgba(0, 0, 0, 0.5);
+    }
+
+    .h6{
+        font-size: 100px;
+        text-shadow: 20px 20px 20px rgba(0, 0, 0, 0.5);
+    }
+
+    .projeto{
+        width: 29%;
+        display: flex;
+        flex-direction: column;
+        background-color: bisque;
+        gap: 20px;
+        padding: 20px;
+        text-align: center;
+    }
+
+    h1{
+        font-size: 100px;
+        text-shadow: 20px 20px 20px rgba(0, 0, 0, 0.5);
+    }
+    p{
+        font-size: 50px;
+        text-shadow: 20px 20px 20px rgba(0, 0, 0, 0.5);
+    }
+
+    #projetos{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5px
+    }
+    h4{
+        font-size: 50px;
+    }
