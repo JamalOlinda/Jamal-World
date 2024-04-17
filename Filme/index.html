@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Html do Hobbit</title>
+<style>
+        
+        @font-face {
+            font-family: 'ringbeadermedium';
+            src: url('./RINGBEARERMEDIUM-51MGZ.TTF') format('truetype');
+        }
+
+    body {
+        font-family: 'ringbeadermedium', Calibri, sans-serif;
+    }
+
+    *{
+        padding: 0;
+        margin: 0;
+    }
+    header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 70px;
+        background-image: url(imagem.png);
+        color: rgb(206, 8, 8);
+        font-family: 'ringbeadermedium', Calibri, sans-serif;
+        border: solid 1px;
+        border-radius: 20px;
+        background-size:cover
+    }
+    ul li{
+        list-style-type: none;
+    }
+    header ul{
+        display: flex;
+        gap: 20px;
+    }
+    a{
+        text-decoration: none;
+        color: white;
+    }
+    .direita img{
+        width: 100%;
+        border-radius: 50px;
+        box-shadow: 20px 20px 20px black;
+    }
+    .direita, .esquerda{
+        width: 50vw;
+        padding: 20px;
+    }
+    .section{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 70px;
+    }
+    .content{
+        background-color: rgba(255, 255,255, 0.7);
+        border-radius: 30px;
+        margin: 50px 80px;
+    }
+    .meio{
+        text-align: center;
+    }
+
+    h3{
+        font-size: 50px;
+        text-shadow: 20px 20px 20px rgba(0, 0, 0, 0.5);
+    }
+
+    .h6{
+        font-size: 100px;
+        text-shadow: 20px 20px 20px rgba(0, 0, 0, 0.5);
+    }
+
+    .projeto{
+        width: 29%;
+        display: flex;
+        flex-direction: column;
+        background-color: bisque;
+        gap: 20px;
+        padding: 20px;
+        text-align: center;
+    }
+
+    h1{
+        font-size: 100px;
+        text-shadow: 20px 20px 20px rgba(0, 0, 0, 0.5);
+    }
+    p{
+        font-size: 50px;
+        text-shadow: 20px 20px 20px rgba(0, 0, 0, 0.5);
+    }
+
+    #projetos{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5px
+    }
+    h4{
+        font-size: 25px;
+    }
+    h2{
+        display: flex;
+        text-align: center;
+    }
+    li{
+        color: rgb(206, 8, 8);
+    }
+    a{
+        color: rgb(206, 8, 8); 
+    }
+    main{
+        background-image: url(https://static.wikia.nocookie.net/lotr/images/b/b5/Site-background-light/revision/latest?cb=20230418002019);
+        padding: 15px;
+        
+    }
+    .carousel {
+    width: 100%;
+    overflow: hidden;
+}
+
+.carousel img {
+    width: 100%;
+    display: block;
+    animation: carouselAnimation 10s infinite; /* 10s é o tempo de duração da transição entre as imagens */
+}
+
+@keyframes carouselAnimation {
+    0% { opacity: 1; } /* Começa com a primeira imagem visível */
+    25% { opacity: 0; } /* Aos 25% do tempo de duração, a primeira imagem desaparece */
+    26% { opacity: 0; } /* Neste ponto, a segunda imagem já é completamente visível */
+    50% { opacity: 1; } /* A segunda imagem permanece visível até a metade da duração total */
+    75% { opacity: 0; } /* Aos 75% do tempo de duração, a segunda imagem desaparece */
+    76% { opacity: 0; } /* Neste ponto, a terceira imagem já é completamente visível */
+    100% { opacity: 1; } /* A terceira imagem permanece visível até o final da duração */
+}
+</style>
+</head>
+<body>
+<main>
+    <header>
+        <div>
+            <h2>Hobbit - A obra que inventou a fantasia</h2>
+       </div>
+    <nav>
+    <ul>
+        <li><a href="./projetos.html">Informações</a></li>
+        <li><a href="#sobre">Sinopse</a></li>
+        <li><a href="#Home">Créditos</a></li>
+    </ul>
+    </nav>
+    </header>
+    <div class="content">
+        <div class="section" id="#home">
+            <div class="esquerda">
+                <h1>Trilogia Hobbit</h1>
+                <p>Uma resenha por João Victor Pacheco</p>
+            </div>
+            <div class="direita">
+                <div class="carousel">
+                    <img src="Goat.jpg" alt="Imagem 1">
+                    <img src="casa.jpg" alt="Imagem 1">
+                    <img src="dragao.jpg" alt="Imagem 1">
+                </div>
+            </div> <!-- final da sessão home-->
+        </div>
+        
+        <!--inicio da sessão sobre-->
+        <div class="section" id="sobre">
+            <div class ="meio">
+                <h3> Sobre mim</h3>
+                <h4>Sou um jovem de 16 anos, estudante do ensino médio junto com o curso técnico de desenvolvimento de sistemas, gosto de videogames e de ouvir música e gosto de ser feliz :]</h4>
+            </div>
+        </div>
+    </div>
+</main>
+</body>
+</html>
