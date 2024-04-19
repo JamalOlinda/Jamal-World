@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Html do Hobbit</title>
+    <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carrossel de Imagens</title>
+  <link rel="stylesheet" href="styles.css">
+<style>
+    
+        
+        @font-face {
+            font-family: 'ringbeadermedium';
+            src: url('./RINGBEARERMEDIUM-51MGZ.TTF') format('truetype');
+        }
+
+    body {
+        font-family: 'ringbeadermedium', Calibri, sans-serif;
+    }
+
+    *{
+        padding: 0;
+        margin: 0;
+    }
+    header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 70px;
+        background-image: url(imagem.png);
+        color: rgb(206, 8, 8);
+        font-family: 'ringbeadermedium', Calibri, sans-serif;
+        border: solid 1px;
+        border-radius: 20px;
+        background-size:cover
+    }
+    ul li{
+        list-style-type: none;
+    }
+    header ul{
+        display: flex;
+        gap: 20px;
+    }
+    a{
+        text-decoration: none;
+        color: white;
+    }
+    .direita img{
+        width: 100%;
+        border-radius: 50px;
+        box-shadow: 20px 20px 20px black;
+    }
+    .direita, .esquerda{
+        width: 50vw;
+        padding: 20px;
+    }
+    .section{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 70px;
+    }
+    .content{
+        background-color: rgba(255, 255,255, 0.7);
+        border-radius: 30px;
+        margin: 50px 80px;
+    }
+    .meio{
+        text-align: center;
+    }
+
+    h3{
+        font-size: 50px;
+        text-shadow: 20px 20px 20px rgba(0, 0, 0, 0.5);
+    }
+
+    .h6{
+        font-size: 100px;
+        text-shadow: 20px 20px 20px rgba(0, 0, 0, 0.5);
+    }
+
+    .projeto{
+        width: 29%;
+        display: flex;
+        flex-direction: column;
+        background-color: bisque;
+        gap: 20px;
+        padding: 20px;
+        text-align: center;
+    }
+
+    h1{
+        font-size: 100px;
+        text-shadow: 20px 20px 20px rgba(0, 0, 0, 0.5);
+    }
+    p{
+        font-size: 50px;
+        text-shadow: 20px 20px 20px rgba(0, 0, 0, 0.5);
+    }
+
+    #projetos{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5px
+    }
+    h4{
+        font-size: 25px;
+    }
+    h2{
+        display: flex;
+        text-align: center;
+    }
+    li{
+        color: rgb(206, 8, 8);
+    }
+    a{
+        color: rgb(206, 8, 8); 
+    }
+    main{
+        background-image: url(https://static.wikia.nocookie.net/lotr/images/b/b5/Site-background-light/revision/latest?cb=20230418002019);
+        padding: 15px;
+        
+    }
+    .carousel {
+    width: 100%;
+    max-width: 500px;
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    border-radius: 30px;
+}
+.slide.active {
+  opacity: 1;
+}
+.slide {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+#slide1 {
+  background-image: url('./anão.jpg');
+}
+#slide2 {
+  background-image: url('./bilbo.jpg');
+}
+#slide3 {
+  background-image: url('./dragao.jpg');
+}
+footer {
+    display: flex;
+    text-align: center;
+    width: 100%;
+    justify-content: center;
+    color: white
+}
+
+</style>
+
+</head>
+<body>
+<main>
+    <header>
+        <div>
+            <h2>Hobbit - A obra que inventou a fantasia</h2>
+       </div>
+    <nav>
+    <ul>
+        <li><a href="./index.html">Informações</a></li>
+        <li><a href="./index2.html">Sinopse</a></li>
+    </ul>
+    </nav>
+    </header>
+    <div class="content">
+        <div class="section" id="#home">
+            <div class="esquerda">
+                <h1>Trilogia Hobbit</h1>
+                <p>Uma resenha por João Victor Pacheco</p>
+            </div>
+            <div class="direita">
+                <div class="carousel">
+                    <div class="slide" id="slide1"></div>
+                    <div class="slide" id="slide2"></div>
+                    <div class="slide" id="slide3"></div>
+                </div>
+                <script>
+                    document.addEventListener("DOMContentLoaded", function() {
+                  var slides = document.querySelectorAll('.slide');
+                  var currentSlide = 0;
+                
+                  function nextSlide() {
+                    slides[currentSlide].classList.remove('active');
+                    currentSlide = (currentSlide + 1) % slides.length;
+                    slides[currentSlide].classList.add('active');
+                  }
+                
+                  setInterval(nextSlide, 3000); // Muda de slide a cada 3 segundos (3000 milissegundos)
+                });
+                
+                </script>
+            </div> <!-- final da sessão home-->
+        </div>
+        
+        <!--inicio da sessão sobre-->
+        <div class="section" id="Informações">
+            <div class ="meio">
+                <h3> Informações</h3>
+                <h4>O Hobbit é uma série de três filmes de fantasia épica e de aventura dirigido, coescrito e produzido por Peter Jackson e baseado no livro The Hobbit de J. R. R. Tolkien publicado em 1937. Os filmes são, por subtítulo: Uma Jornada Inesperada (2012), A Desolação de Smaug (2013) e A Batalha dos Cinco Exércitos (2014). O Senhor dos Anéis é originalmente uma sequência do livro, assim, a série age como uma prequela para a trilogia dos filmes, também dirigidos por Jackson. Com o elenco principal contendo Martin Freeman, Richard Armitage e Ian McKellen</h4>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <p><strong>João Victor Pacheco - 2B</strong></p>
+    </footer>    
+</main>
+</body>
+</html>
