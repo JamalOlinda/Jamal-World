@@ -1,0 +1,1 @@
+let frase = "javascript é incrível!"
