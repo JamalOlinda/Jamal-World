@@ -1,0 +1,1 @@
+const chave1 = Symbol("descrição da chave");
