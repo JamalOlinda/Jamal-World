@@ -1,0 +1,111 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    background-image: url(eddu-design-eddu-design-imagem-2022-12-22-125807482.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    font-family: 'Fonte ordem';
+}
+
+.calculadora{
+    background-image: url(91e7c49960b010fbc3be096bab30b7c8.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 300px;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 0 150px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    border: #fff;
+}
+
+.botoes{
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(4,1fr);
+}
+
+.btn{
+    padding: 15px;
+    font-size: 18px;
+}
+
+.btn:hover{
+    font-weight: bold;
+}
+
+h1 {
+    color: rgb(255, 255, 255); /* Cor do texto */
+    text-align: center;
+  }
+  
+
+#display{
+    width: 100%;
+    height: 50px;
+    background-image: url(a7772eee52c9fee92754be3b4e7a0041.jpg);
+    color: white;
+    align-items: center;
+    
+}
+
+.duplo{
+    grid-column: span 2;
+}
+
+h2 {
+    color: hsl(0, 0%, 100%); /* Cor do texto */
+    text-align: center;
+    text-shadow: 5px 5px 5px chartreuse(0, 0, 0, 0.5);
+  }
+  
+  @font-face {
+    font-family: 'Fonte ordem';
+    src: url('adobehebrew-regular.otf') format('opentype');
+  }
+  
+  
+  @keyframes flicker {
+    0%, 18%, 22%, 25%, 53%, 57%, 100% {
+      text-shadow: 
+        0 0 5px #fff,
+        0 0 10px #fff,
+        0 0 15px #fff,
+        0 0 20px #0fa,
+        0 0 30px #0fa,
+        0 0 40px #0fa,
+        0 0 50px #0fa;
+    }
+    20%, 24%, 55% {
+      text-shadow: none;
+    }
+  }
+  
+  .neonText {
+    color: #fff;
+    animation: flicker 3s infinite alternate;
+  }
+  @keyframes neonBlink {
+    0%, 100% {
+        text-shadow: 0 0 5px #0fa, 0 0 10px #0fa, 0 0 20px #0fa, 0 0 40px #0fa, 0 0 80px #0fa, 0 0 90px #0fa, 0 0 100px #0fa, 0 0 150px #0fa;
+        color: #0fa;
+    }
+    50% {
+        text-shadow: none;
+        color: #000;
+    }
+}
+
+  
+  
