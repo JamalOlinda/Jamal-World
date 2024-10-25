@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil do Usuário</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .profile-container {
+            width: 50%;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+        .profile-header {
+            text-align: center;
+        }
+        .profile-header img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+        }
+        .profile-details {
+            margin-top: 20px;
+        }
+        .profile-details h2 {
+            margin: 0;
+        }
+        .profile-details p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="profile-container">
+        <div class="profile-header">
+            <img id="profile-pic" src="imagens/nouser.png" alt="Foto do Usuário">
+            <h1 id="user-name">Nome do Usuário</h1>
+        </div>
+        <div class="profile-details">
+            <h2>Detalhes do Perfil</h2>
+            <p><strong>Email:</strong> <span id="user-email">usuario@exemplo.com</span></p>
+            <p><strong>Telefone:</strong> <span id="user-phone">(11) 1234-5678</span></p>
+            <p><strong>Endereço:</strong> <span id="user-address">Rua Exemplo, 123, São José</span></p>
+            <p><strong>Data de Nascimento:</strong> <span id="user-dob">01/01/1990</span></p>
+        </div>
+    </div>
+
+    <script>
+        // Função para carregar os dados do perfil do Local Storage
+        function carregarPerfil() {
+            const nome = localStorage.getItem('nome') || 'Nome do Usuário';
+            const email = localStorage.getItem('email') || 'usuario@exemplo.com';
+            const telefone = localStorage.getItem('telefone') || '(11) 1234-5678';
+            const endereco = localStorage.getItem('endereco') || 'Rua Exemplo, 123, São José';
+            const dataNascimento = localStorage.getItem('dataNascimento') || '01/01/1990';
+
+            document.getElementById('user-name').textContent = nome;
+            document.getElementById('user-email').textContent = email;
+            document.getElementById('user-phone').textContent = telefone;
+            document.getElementById('user-address').textContent = endereco;
+            document.getElementById('user-dob').textContent = dataNascimento;
+        }
+
+        // Chama a função para carregar os dados do perfil ao carregar a página
+        window.onload = carregarPerfil;
+    </script>
+</body>
+</html>
